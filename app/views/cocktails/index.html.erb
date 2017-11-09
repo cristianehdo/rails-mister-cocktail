@@ -1,0 +1,10 @@
+<h1>Mister Cocktails</h1>
+
+<ul class="list-inline">
+  <% @cocktails.each do |cocktail| %>
+  <li>
+    <%= cocktail.name %>
+  </li>
+  <% end %>
+</ul>
+<%= link_to "Add a cocktail", new_cocktail_path %>

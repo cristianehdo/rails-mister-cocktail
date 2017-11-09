@@ -1,13 +1,14 @@
-require "open-uri"
 require "json"
+require "open-uri"
 
 puts 'Cleaning database...'
 Ingredient.destroy_all
 
 url = "http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
-file = open(url)
+file = open(url).read
 ingredients = JSON.parse(file)
-ingredients.each do |i|
-  Ingredient.create!(name: i["strIngredient1"])
-  puts "#{i["strIngredient1"]} added to database"
+ingredients["drinks"].each do |i|
+  ingredient = i['strIngredient1']
+  Ingredient.create!(name: ingredient)
+  puts "#{ingredient} added to database"
 end
