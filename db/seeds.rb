@@ -12,3 +12,5 @@ ingredients["drinks"].each do |i|
   Ingredient.create!(name: ingredient)
   puts "#{ingredient} added to database"
 end
+
+
