@@ -3,6 +3,7 @@
     <h1><%= @cocktail.name %></h1>
   </div>
 </div>
+<div class="container-white">
 
 <ul class="list-unstyled">
 <% @cocktail.doses.each do |dose| %>
@@ -16,13 +17,17 @@
 <% end %>
 </ul>
 <hr>
-<%= link_to "Back to our Cocktails", cocktails_path %>
-<hr>
 
-
-<h3>Add a dose to this cocktail</h3>
-<%= simple_form_for([@cocktail, @dose]) do |f| %>
-<%= f.input :description %>
-<%= f.association :ingredient %>
-<%= f.submit class: "btn btn-primary"%>
-<% end %>
+  <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+          <h3>Add a dose to this cocktail</h3>
+          <%= simple_form_for([@cocktail, @dose]) do |f| %>
+          <%= f.input :description %>
+          <%= f.association :ingredient %>
+          <%= f.submit class: "btn-white"%>
+          <% end %>
+        </div>
+      </div>
+  </div>
+</div>
