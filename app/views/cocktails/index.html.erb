@@ -2,33 +2,17 @@
   <div class="banner-content-lg">
     <h1>Mister Cocktail</h1>
     <p>Get inspired and create your own cocktail</p>
-    <form action="/search">
+    <form action="search">
       <input type="text" name= "name" placeholder="Search by name..." class="form-control search-imput">
     </form>
   </div>
 </div>
-
-
-
-
 <div class="container-white">
   <div class="title">
-    <h1>Mister Cocktails</h1>
-    <%= link_to "Add a cocktail", new_cocktail_path, class: "btn-green" %>
+    <h1 id="index">Mister Cocktails</h1>
+    <%= link_to "Add a cocktail", new_cocktail_path, class: "btn-white" %>
   </div>
-  <div class="row">
-    <div class="cards">
-    <% @cocktails.each do |cocktail| %>
-    <div class="col-xs-12 col-sm-4">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cl_image_path cocktail.image? ? cocktail.image : "zkxgfufzlypo0l782cly" %>)";>
-        <div class="card-description">
-          <h2><%= cocktail.name %></h2>
-        </div>
-      <%= link_to "", cocktail_path(cocktail), class: "card-link"  %>
-      </div>
-     </div>
-    <% end %>
-    </div>
+  <%= render "cards" %>
     <p>teste</p>
     <p>teste</p>
     <p>teste</p>

@@ -22,8 +22,7 @@ class CocktailsController < ApplicationController
   end
 
   def search
-    @cocktails = Cocktail.where("name LIKE ?", params[:name])
-    redirect_to cocktails_path(@cocktails)
+    @cocktails = Cocktail.where("name ILIKE ?", params[:name])
   end
 
   def cocktail_params

@@ -1,15 +1,18 @@
 .btn-white {
   text-decoration: none;
-  padding: 12px 22px;
+  padding: 8px 22px;
   border: 1px solid #9F9CAC;
-  border-radius: 4px;
+  border-radius: 30px;
   color: #9F9CAC;
   opacity: 0.8;
   background-color: white;
+  transition-duration: 0.3s, 0.3s;
 }
 
 .btn-white:hover {
   text-decoration: none;
+  background-color: #566268;
+  color: white;
   opacity: 1;
 }
 
@@ -25,5 +28,16 @@
 
 .btn-green:hover {
   text-decoration: none;
+  opacity: 1;
+}
+
+.btn-medium {
+  border: 1px solid #9F9CAC;
+  border-radius: 30px;
+  color: #9F9CAC;
+  opacity: 0.8;
+}
+
+.btn-medium:hover {
   opacity: 1;
 }
