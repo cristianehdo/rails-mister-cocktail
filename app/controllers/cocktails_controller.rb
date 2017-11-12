@@ -21,6 +21,11 @@ class CocktailsController < ApplicationController
     @cocktail = Cocktail.find(params[:id])
   end
 
+  def search
+    @cocktails = Cocktail.where("name LIKE ?", params[:name])
+    redirect_to cocktails_path(@cocktails)
+  end
+
   def cocktail_params
     params.require(:cocktail).permit(:name, :description, :image)
   end
