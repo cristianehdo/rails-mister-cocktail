@@ -1,23 +1,30 @@
 /* Main navbar */
-.navbar {
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  background: white;
+.navbar-black {
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  background: #31393C;
   transition: all 0.3s ease;
   height: 70px;
   padding: 0px 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  position: fixed;
 }
 
 
 /* Navbar link */
-.navbar-link {
-  color: #1ED760;
+.navbar-black-link {
+  color: white;
   font-size: 16px;
 }
-.navbar-link:hover {
-  color: #da552f;
+.navbar-black-link:hover {
+  color: orange;
   text-decoration: none;
 }
+
+.navbar-black-bottom {
+  bottom: 0;
+}
+
 
